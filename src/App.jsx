@@ -5,6 +5,8 @@ import Profile from "./pages/Profile";
 import Layout from "./components/Layout";
 import NotFound from "./pages/NotFound";
 import PrivateRoute from "./components/PrivateRoute";
+import ProductDetail from "./pages/ProductDetail";
+
 
 function App(){
   return(
@@ -17,6 +19,7 @@ function App(){
           <Profile/>
         </PrivateRoute>}/>
         <Route path="*" element = {<NotFound/>}/>
+        <Route path="/products/:id" element = {<ProductDetail/>}/>
       </Route>
     </Routes>
   )
